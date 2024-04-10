@@ -23,10 +23,10 @@ from rest_framework.decorators import api_view
 class index(APIView):
     renderer_classes = [TemplateHTMLRenderer]
     template_name = 'tutorials/index.html'
-
- #  def get(self, request):
-queryset = Tutorial.objects.all()
-return Response({'tutorials': queryset})
+    
+    # def get(self, request):
+    queryset = Tutorial.objects.all()
+    return Response({'tutorials': queryset})
 
 
 class list_all_tutorials(APIView):
